@@ -1,2 +1,3 @@
 ###Git tips
-- put to repository only important files which cannot be recreated any other tools - don't put any IDE's files or *class files
+- put to repository only important fil
+- git commit message should be of good quality
