@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -47,10 +48,15 @@ public class FirstController {
     // surname param with value losman
     @GetMapping("/my-name")
     public String myName(@RequestParam(value = "name", defaultValue = "Jan") String myName,
-                         @RequestParam(value = "surname", defaultValue = "Kowalski") String mySurname) {
+                         @RequestParam(value = "surname", defaultValue = "Kowalski") String mySurname,
+                         Model pageParameter ) {
         log.info("myName() method was called!");
         log.info("my name is: [{}] and my surname is: [{}]", myName, mySurname);
         log.info(String.format("my name is: [%s] and my surname is: [%s]", myName, mySurname));
+
+        pageParameter.addAttribute("myName", myName);
+        pageParameter.addAttribute("mySurname", mySurname);
+
         return "pages/name-and-surname";
     }
 
