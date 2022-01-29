@@ -18,7 +18,7 @@ public class FirstController {
     // the same as @Slf4j
 //    private static final Logger log = LoggerFactory.getLogger(FirstController.class);
 
-    @GetMapping({"/my-first-page", "/"})
+    @GetMapping({"/my-first-page", "/"}) // putting the url in tht browser
     public String firstPage() {
         log.info("firstPage() method called!!!");
         // looking for html page inside resources/templates
@@ -54,6 +54,7 @@ public class FirstController {
         log.info("my name is: [{}] and my surname is: [{}]", myName, mySurname);
         log.info(String.format("my name is: [%s] and my surname is: [%s]", myName, mySurname));
 
+        // here we are filling the Model map with keys and values
         pageParameter.addAttribute("myName", myName);
         pageParameter.addAttribute("mySurname", mySurname);
 
