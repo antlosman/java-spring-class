@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/person")
 public class PersonController {
 
-    public static final String PERSONS_KEY = "personsKey";
+    public static final String PERSONS_KEY = "persons";
     // with var Java is going to guess type of the variable based on assigned value
 //        var name = "mariusz"; // String name = "mariusz";
 //        var mariusz = new Person("Mariusz", "Pastuszka", 18);
