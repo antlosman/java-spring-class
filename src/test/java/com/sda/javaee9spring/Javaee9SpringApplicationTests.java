@@ -10,6 +10,7 @@ class Javaee9SpringApplicationTests {
 
     @Test
     void contextLoads() {
+        // this test starts the application and checks if every dependency are "fully hear?"
     }
 
     @Test
