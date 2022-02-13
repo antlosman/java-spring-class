@@ -1,11 +1,13 @@
 package com.sda.javaee9spring.controller.rest;
 
 import com.sda.javaee9spring.entity.Person;
+import com.sda.javaee9spring.entity.PersonEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -36,4 +38,5 @@ public class FirstPersonRestController {
         headers.add("name", "james");
         return new ResponseEntity<>(new Person("james", "bond", 007), headers, HttpStatus.OK);
     }
+
 }
