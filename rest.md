@@ -35,13 +35,14 @@ HTTP codes family
 - use nouns for names of Your endpoints (not verbs)
   - read
     - whole collection: /persons - with GET
-    - one item: /persons/{id} - with GET, eg. persons/1
+    - one item: /persons/{id} - with GET, eg. persons/1 
   - create
     - url: /persons - with POST
     - payload put inside request body
   - delete
     - url: /persons{id} - with DELETE, eg. /persons/1
-    - no content in request
+    - no content in response - use 204 status code
+    - 
   - update
     - url: /persons/{id} - with PUT eg. /persons/1 - replace object with new value
     - url: /persons/{id} - with PATCH, eg. /persons/1 - partial update
