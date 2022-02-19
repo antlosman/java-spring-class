@@ -32,6 +32,7 @@ HTTP codes family
 
 
 - urls - good practice (playing with person)
+- use nouns for names of Your endpoints (not verbs)
   - read
     - whole collection: /persons - with GET
     - one item: /persons/{id} - with GET, eg. persons/1
