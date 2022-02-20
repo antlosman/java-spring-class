@@ -49,4 +49,17 @@ public class RealPersonService {
         }
         return result;
     }
+
+    @Transactional
+    public PersonEntity savePerson(PersonEntity entity) {
+        log.info("entity for saving: [{}]", entity);
+        if (!personRepository.checkDuplicates(entity.getName(), entity.getSurname())) {
+            personRepository.save(entity);
+            log.info("entity after saving [{}]", entity);
+        } else {
+            log.info("duplicate!!!");
+        }
+
+        return entity;
+    }
 }
